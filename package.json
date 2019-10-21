@@ -1,0 +1,30 @@
+{
+  "name": "travel-time",
+  "version": "1.0.0",
+  "description": "travel time calculation",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RemySd/TravelTime.git"
+  },
+  "keywords": [
+    "travel",
+    "time"
+  ],
+  "author": "RemySd",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RemySd/TravelTime/issues"
+  },
+  "homepage": "https://github.com/RemySd/TravelTime#readme",
+  "dependencies": {
+    "example-library": "^0.4.0"
+  }
+}
