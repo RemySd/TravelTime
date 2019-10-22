@@ -1,6 +1,6 @@
 {
   "name": "travel-time",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "travel time calculation",
   "main": "index.js",
   "scripts": {
