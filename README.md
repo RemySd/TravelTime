@@ -9,7 +9,7 @@ npm i travel-time
 ## Example
 
 ```javascript
-const travelTime = require('./index');
+const travelTime = require('travel-time');
 
 let t1 = {
     hours: 2,
