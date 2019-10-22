@@ -32,3 +32,6 @@ console.log(travelTime.calculate(t1, t2));
 node example.js
 { hours: 5, minutes: 48, secondes: 23 }
 ```
+
+
+Good flight :airplane:
