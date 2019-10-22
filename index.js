@@ -1,31 +1,52 @@
 module.exports = {
-    calculate: function (time1, time2) {
-        let hrs, min, sec, hrsSup, minSup = 0;
+    calculate: function () {
 
-        let hours1 = time1['hours'];
-        let minutes1 = time1['minutes'];
-        let secondes1 = time1['secondes'];
+        let hours = [];
+        let minutes = [];
+        let secondes = [];
 
-        let hours2 = time2['hours'];
-        let minutes2 = time2['minutes'];
-        let secondes2 = time2['secondes'];
+        for (let i = 0; i < arguments.length; ++i) {
+            if (arguments[i].hasOwnProperty('hours')) {
+                hours.push(arguments[i].hours)
+            }
 
-        if (hours1 || hours2) {
-            hrs = hours1 + hours2;
+            if (arguments[i].hasOwnProperty('minutes')) {
+                minutes.push(arguments[i].minutes)
+            }
+
+            if (arguments[i].hasOwnProperty('secondes')) {
+                secondes.push(arguments[i].secondes)
+            }
         }
 
-        if (minutes1 || minutes2) {
-            min = minutes1 + minutes2;
-            hrs += ~~(min / 60);
-            min = min % 60;
-        }
+        let hrs = 0;
+        let min = 0;
+        let sec = 0;
 
-        if (secondes1 || secondes2) {
-            sec = secondes1 + secondes2;
-            min += ~~(sec / 60);
-            sec = sec % 60;
-        }
+        hours.forEach(function(element) {
+            hrs += element;
+        });
 
-        return (hrs + 'h' + min + 'min' + sec + 'sec');
+        minutes.forEach(function(element) {
+            min += element;
+        });
+
+        secondes.forEach(function(element) {
+            sec += element;
+        });
+
+        // When the number of hours if egal or highter than 60
+        hrs += ~~(min / 60);
+        // we keep the numbers of minute
+        min = min % 60;
+
+        min += ~~(sec / 60);
+        sec = sec % 60;
+
+        return {
+            hours: hrs,
+            minutes: min,
+            secondes: sec
+        };
     }
 };
