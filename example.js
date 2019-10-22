@@ -1,4 +1,4 @@
-import * as travelTime from "./index.js";
+const travelTime = require('./index');
 
 let t1 = {
     hours: 2,
